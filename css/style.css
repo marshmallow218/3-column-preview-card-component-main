@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-light-gray);
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10vh 0;
+}
+
+.card1 {
+    background-color: var(--bright-orange);
+}
+
+.border1 {
+    border-radius: 0.5rem 0.5rem 0 0; 
+}
+
+.card2 {
+    background-color: var(--dark-cyan);
+}
+
+.card3 {
+    background-color: var(--very-dark-cyan);
+}
+
+.border2 {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card1, .card2, .card3 {
+    width: 320px;
+    padding: 2.5rem;
+}
+
+img {
+    width: 64px;
+    height: 40px;
+    margin-bottom: 2.1rem;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: var(--fw-bold);
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    margin-bottom: 2.1rem;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: var(--fw-normal);
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color: var(--transparent-white);
+    padding-right: 0.8rem;
+    margin-bottom: 2.1rem;
+}
+
+a {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: var(--fw-normal);
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 2.5rem;
+    text-decoration: none;
+    background-color: white;
+}
+
+.card1 a {
+    color: var(--bright-orange);
+}
+
+.card2 a {
+    color: var(--dark-cyan);
+}
+
+.card3 a {
+    color: var(--very-dark-cyan);
+}
+
+.card1 a:hover {
+    color: var(--transparent-white);
+    background-color: var(--bright-orange);
+    border: 2px solid var(--very-light-gray);
+    padding: calc(0.9rem - 2px) calc(1.8rem - 2px);
+}
+
+.card2 a:hover {
+    color: var(--transparent-white);
+    background-color: var(--dark-cyan);
+    border: 2px solid var(--very-light-gray);
+    padding: calc(0.9rem - 2px) calc(1.8rem - 2px);
+}
+
+.card3 a:hover {
+    color: var(--transparent-white);
+    background-color: var(--very-dark-cyan);
+    border: 2px solid var(--very-light-gray);
+    padding: calc(0.9rem - 2px) calc(1.8rem - 2px);
+}
+
+@media (min-width: 768px) {
+    .cards-container {
+        flex-direction: row;
+    }
+    
+    .border1 {
+        border-radius: 0.5rem 0 0 0.5rem; 
+    }
+    
+    .border2 {
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+    
+    p {
+        margin-bottom: 6rem;
+    }
+    
+    .card1, .card2, .card3 {
+        width: 300px;
+    }
+}
